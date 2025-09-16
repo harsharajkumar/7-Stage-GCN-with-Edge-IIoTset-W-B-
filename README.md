@@ -46,9 +46,10 @@ Preprocessing includes:
 2. Install dependencies:  
 
 ```bash
+python 
 !pip install -q torch-scatter torch-sparse torch-geometric imbalanced-learn matplotlib seaborn wandb
 Upload your kaggle.json to access the dataset.
-```bash
+```
 
 Run the training script — logs and visualizations will sync to W&B.
 
