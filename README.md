@@ -68,33 +68,41 @@ Reconstruction error histograms
 t-SNE visualizations at each stage
 
 To enable logging, log in with:
-
+``` python
 import wandb
 wandb.login()
+```
 
 # 📈 Results
 
 Binary anomaly detection (Normal vs Attack)
 
-Achieves high precision, recall, and F1 on Edge-IIoTset
+# Achieves high precision, recall, and F1 on Edge-IIoTset
+<img width="326" height="112" alt="image" src="https://github.com/user-attachments/assets/5779468d-5cf0-438b-a99c-48addcefe6e5" />
 
-t-SNE plots show progressive feature separation across stages
 
-📌 Insert screenshots of confusion matrix, ROC curve, and t-SNE plots here
+# t-SNE plots show progressive feature separation across stages
+
+<img width="404" height="293" alt="image" src="https://github.com/user-attachments/assets/c3c8fd0f-166c-4205-9111-ca81feac2b9c" 
+<img width="476" height="306" alt="image" src="https://github.com/user-attachments/assets/53f09791-178f-45c0-b1bf-5b7348d208fa" />
+<img width="453" height="301" alt="image" src="https://github.com/user-attachments/assets/2b699632-fcdb-482d-8e09-45862bf5e56a" />
+<img width="463" height="296" alt="image" src="https://github.com/user-attachments/assets/50f43f77-4d34-4ceb-bc0e-06d745ac5565" />
+<img width="520" height="299" alt="image" src="https://github.com/user-attachments/assets/cb476770-c7fa-4230-b9fa-c2416a6aef54" />
+
 
 # 💾 Saving & Loading the Model
 
 Save after training:
-
+```
 torch.save(model.state_dict(), "7stage_model.pt")
-
+```
 
 Reload later:
-
+```
 model = SevenStageGCN(input_dim)
 model.load_state_dict(torch.load("7stage_model.pt"))
 model.eval()
-
+```
 
 👨‍💻 Author
 
